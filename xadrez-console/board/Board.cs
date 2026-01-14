@@ -6,11 +6,6 @@
         public int Rows;
         public int Columns;
 
-        public Board()
-        {
-
-        }
-
         public Board(int rows, int columns)
         {
             Rows = rows;
