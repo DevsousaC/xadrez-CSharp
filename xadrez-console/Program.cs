@@ -1,15 +1,13 @@
-﻿using xadrez_console.Tabuleiro;
+﻿using xadrez_console.board;
 
 namespace xadrez_console { 
     internal class Program
     {
         static void Main(string[] args)
         {
-            Posicao P;
+            Board board = new Board(8, 8);
 
-            P = new Posicao(3, 3);
-
-            Console.WriteLine("Posição: " + P);
+            View.ViewBoard(board);
         }
     }
 }
