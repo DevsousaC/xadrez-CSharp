@@ -3,8 +3,8 @@
     internal class Board
     {
         private Piece[,] pieces;
-        public int Rows;
-        public int Columns;
+        public int Rows { get; set; }
+        public int Columns { get; set; }
 
         public Board(int rows, int columns)
         {
@@ -17,5 +17,11 @@
         {
             return pieces[row, column];
         } 
+
+        public void placePiece(Piece piece, Position position)
+        {
+            pieces[position.Rows, position.Columns] = piece;
+            piece.Position = position;
+        }
     }
 }

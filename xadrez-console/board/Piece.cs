@@ -6,7 +6,7 @@
         public Color Color { get; protected set; }
         public int MoveCount { get; protected set; }
         public Board Board { get; protected set; }
-        public Piece(Position p, Color c, Board b)
+        public Piece(Color c, Board b)
         {
             Position = null;
             Color = c;
