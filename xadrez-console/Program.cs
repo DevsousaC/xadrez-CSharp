@@ -6,13 +6,22 @@ namespace xadrez_console {
     {
         static void Main(string[] args)
         {
-            Board board = new Board(8, 8);
 
-            board.placePiece(new Rook(board, Color.Black), new Position(0, 0));
-            board.placePiece(new Rook(board, Color.Black), new Position(1, 2));
-            board.placePiece(new King(board, Color.Black), new Position(4, 4));
+            try
+            {
+                Board board = new Board(8, 8);
 
-            View.ViewBoard(board);
+                board.placePiece(new Rook(board, Color.Black), new Position(0, 0));
+                board.placePiece(new Rook(board, Color.Black), new Position(1, 2));
+                board.placePiece(new King(board, Color.Black), new Position(4, 4));
+
+                View.ViewBoard(board);
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
